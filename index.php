@@ -11,6 +11,8 @@
 
 // [ 应用入口文件 ]
 // 应用入口文件
+echo 1;
+exit();
 if (extension_loaded('zlib')){
     ob_end_clean();
     ob_start('ob_gzhandler');
