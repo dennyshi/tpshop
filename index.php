@@ -1,6 +1,5 @@
 <?php
-echo 1;
-exit();
+
 if (extension_loaded('zlib')){
     ob_end_clean();
     ob_start('ob_gzhandler');
@@ -9,7 +8,7 @@ if (extension_loaded('zlib')){
 if(version_compare(PHP_VERSION,'5.4.0','<'))  die('require PHP > 5.4.0 !');
 error_reporting(E_ALL ^ E_NOTICE);//显示除去 E_NOTICE 之外的所有错误信息
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);//报告运行时错误
-exit();
+
 //检测是否已安装TPshop系统
 if(file_exists("./install/") && !file_exists("./install/install.lock")){
 	if($_SERVER['PHP_SELF'] != '/index.php'){
